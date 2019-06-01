@@ -17,7 +17,6 @@
 @property (nonatomic, strong) UIImagePickerController *pickerController;
 @end
 
-//
 
 @implementation ViewController
 
@@ -27,6 +26,27 @@
     NSURL *modelUrl = [[NSBundle mainBundle] URLForResource:@"ImageClassifier" withExtension:@"mlmodel"];
     _imageAnalyze = [[ImagesAnalyzer alloc] initWithUrl:modelUrl];
 
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.pickerController.sourceType == UIImagePickerControllerSourceTypePhotoLibrary) {
+        UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(showCamera:)];
+        viewController.navigationItem.leftBarButtonItems = [NSArray arrayWithObject:button];
+        viewController.navigationController.navigationBarHidden = NO; // important
+    } else {
+        UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithTitle:@"Library" style:UIBarButtonItemStylePlain target:self action:@selector(showLibrary:)];
+        viewController.navigationItem.leftBarButtonItems = [NSArray arrayWithObject:button];
+        viewController.navigationItem.title = @"Take Photo";
+        viewController.navigationController.navigationBarHidden = NO; // important
+    }
+}
+
+- (void) showCamera: (id) sender {
+    self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+}
+
+- (void) showLibrary: (id) sender {
+    self.pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 }
 
 
