@@ -17,6 +17,9 @@
 		4F1A2061229AD3A300601FBA /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2060229AD3A300601FBA /* __UITests.m */; };
 		4F1A2070229AD3F100601FBA /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A206F229AD3F100601FBA /* ImageClassifier.mlmodel */; };
 		4F54A94122A157A200AB2790 /* ImagesAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F54A94022A157A200AB2790 /* ImagesAnalyzer.m */; };
+		4F7AF3A522A53B870060842E /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AF3A422A53B870060842E /* CommentView.m */; };
+		4F7AF3A822A552930060842E /* analyzeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AF3A722A552930060842E /* analyzeView.m */; };
+		4F7AF3AB22A556490060842E /* AnalyzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AF3AA22A556490060842E /* AnalyzeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,12 @@
 		4F1A206F229AD3F100601FBA /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		4F54A93F22A157A200AB2790 /* ImagesAnalyzer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesAnalyzer.h; sourceTree = "<group>"; };
 		4F54A94022A157A200AB2790 /* ImagesAnalyzer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesAnalyzer.m; sourceTree = "<group>"; };
+		4F7AF3A322A53B870060842E /* CommentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		4F7AF3A422A53B870060842E /* CommentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		4F7AF3A622A552930060842E /* analyzeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = analyzeView.h; sourceTree = "<group>"; };
+		4F7AF3A722A552930060842E /* analyzeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = analyzeView.m; sourceTree = "<group>"; };
+		4F7AF3A922A556490060842E /* AnalyzeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalyzeViewController.h; sourceTree = "<group>"; };
+		4F7AF3AA22A556490060842E /* AnalyzeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalyzeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +119,12 @@
 				4F1A203D229AD3A100601FBA /* AppDelegate.m */,
 				4F1A203F229AD3A100601FBA /* ViewController.h */,
 				4F1A2040229AD3A100601FBA /* ViewController.m */,
+				4F7AF3A322A53B870060842E /* CommentView.h */,
+				4F7AF3A422A53B870060842E /* CommentView.m */,
+				4F7AF3A922A556490060842E /* AnalyzeViewController.h */,
+				4F7AF3AA22A556490060842E /* AnalyzeViewController.m */,
+				4F7AF3A622A552930060842E /* analyzeView.h */,
+				4F7AF3A722A552930060842E /* analyzeView.m */,
 				4F54A93F22A157A200AB2790 /* ImagesAnalyzer.h */,
 				4F54A94022A157A200AB2790 /* ImagesAnalyzer.m */,
 				4F1A2042229AD3A100601FBA /* Main.storyboard */,
@@ -270,10 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7AF3A822A552930060842E /* analyzeView.m in Sources */,
 				4F1A2041229AD3A100601FBA /* ViewController.m in Sources */,
 				4F1A204C229AD3A300601FBA /* main.m in Sources */,
 				4F54A94122A157A200AB2790 /* ImagesAnalyzer.m in Sources */,
 				4F1A203E229AD3A100601FBA /* AppDelegate.m in Sources */,
+				4F7AF3AB22A556490060842E /* AnalyzeViewController.m in Sources */,
+				4F7AF3A522A53B870060842E /* CommentView.m in Sources */,
 				4F1A2070229AD3F100601FBA /* ImageClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +464,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBXN755W85;
 				INFOPLIST_FILE = "模型/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +482,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBXN755W85;
 				INFOPLIST_FILE = "模型/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
