@@ -48,11 +48,13 @@
 {
     //    获取图片
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    [_commentView.takePicturesButton setImage:image forState:UIControlStateNormal];
+//    [_commentView.takePicturesButton setImage:image forState:UIControlStateNormal];
     
     //    获取图片后返回
 //    [picker dismissViewControllerAnimated:YES completion:nil];
     AnalyzeViewController *viewController = [[AnalyzeViewController alloc] init];
+    viewController.analyzeImage = [[UIImage alloc] init];
+    viewController.analyzeImage = image;
     [picker presentViewController:viewController animated:YES completion:nil];
 }
 
@@ -81,26 +83,5 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
-//- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-//    if (self.pickerController.sourceType == UIImagePickerControllerSourceTypePhotoLibrary) {
-//        UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(showCamera:)];
-//        viewController.navigationItem.leftBarButtonItems = [NSArray arrayWithObject:button];
-//        viewController.navigationController.navigationBarHidden = NO; // important
-//    } else {
-//        UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithTitle:@"Library" style:UIBarButtonItemStylePlain target:self action:@selector(showLibrary:)];
-//        viewController.navigationItem.leftBarButtonItems = [NSArray arrayWithObject:button];
-//        viewController.navigationItem.title = @"Take Photo";
-//        viewController.navigationController.navigationBarHidden = NO; // important
-//    }
-//}
-//
-//- (void)showCamera: (id) sender {
-//    self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-//}
-//
-//- (void)showLibrary: (id) sender {
-//    self.pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//}
-
 
 @end

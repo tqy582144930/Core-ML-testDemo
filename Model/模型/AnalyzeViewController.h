@@ -10,10 +10,12 @@
 #include "analyzeView.h"
 #include "ViewController.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AnalyzeViewController : UIViewController
 @property (nonatomic, strong) analyzeView *analyzeView;
+@property (nonatomic, strong) UIImage *analyzeImage;
 @end
 
 NS_ASSUME_NONNULL_END
